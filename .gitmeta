@@ -1,0 +1,4 @@
+chown -h 1000:1000 './pick-card.sh'
+chmod 0664 './pick-card.sh'
+/usr/bin/touch -hcmd "2022-02-23 18:47:29.4379930000 -0300" './pick-card.sh'
+/usr/bin/touch -hcad "2022-02-23 18:48:47.7147724010 -0300" './pick-card.sh'
