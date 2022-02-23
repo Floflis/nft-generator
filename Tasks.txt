@@ -1,5 +1,3 @@
-- rename pick-card.sh properly
-
 - generate .json files with attributes, into nfts/meta, but match to avoid duplicates
 
 
