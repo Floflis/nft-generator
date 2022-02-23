@@ -8,14 +8,17 @@
 
 # Note variables spread over multiple lines.
 
-suite=($Suites)                # Read into array variable.
-denomination=($Denominations)
+background=($Backgrounds)                # Read into array variable.
+eye=($Eyes)
 
-num_suites=${#suite[*]}        # Count how many elements.
-num_denominations=${#denomination[*]}
+num_backgrounds=${#background[*]}        # Count how many elements.
+num_eyes=${#eye[*]}
 
-echo -n "${denomination[$((RANDOM%num_denominations))]} of "
-echo ${suite[$((RANDOM%num_suites))]}
+#echo -n "${eye[$((RANDOM%num_eyes))]} of "
+#echo ${background[$((RANDOM%num_backgrounds))]}
+
+echo "Background: ${background[$((RANDOM%num_backgrounds))]}"
+echo "Eye: ${eye[$((RANDOM%num_eyes))]}"
 
 exit 0
 
