@@ -37,11 +37,15 @@ eye_result="${eye[$((RANDOM%num_eyes))]}"
 find_duplicate="$background_result $eye_result"
 }
 
-proceed () {
-echo "$background_result $eye_result" >> nfts/test/$nftno.txt
-echo "Background: $background_result"
-echo "Eye: $eye_result"
-nftno="$(($nftno + 1))"
+#save () {
+#echo "$background_result $eye_result" >> nfts/test/$nftno.txt
+#echo "Background: $background_result"
+#echo "Eye: $eye_result"
+#nftno="$(($nftno + 1))"
+#}
+
+save () {
+
 }
 
 duplicate_check_loop () {
@@ -50,7 +54,7 @@ for filename in nfts/test/*.txt; do
    if [ "$(cat $filename)" = "$find_duplicate" ]; then
       echo "Duplicate reached! Skipping..."
    else
-      proceed
+      save
 fi
 done
 }
@@ -63,11 +67,23 @@ done
 #   
 #done
 
-if [ -f nfts/test/1.txt ]; then
-   while true; do
-      duplicate_check_loop
-done
-fi
+#if [ -f nfts/test/1.txt ]; then
+#   while true; do
+#      duplicate_check_loop
+#done
+#fi
+
+#if [ -f nfts/test/1.txt ]; then
+#   duplicate_check_loop
+#   (bash nft-generator.sh &)
+#fi
+
+#if [ -f nfts/test/1.txt ]; then
+#   while true; do
+#      duplicate_check_loop
+#      sleep 5s
+#done
+#fi
 
 #if [ -f nfts/test/1.txt ]; then
 #   while true; do
