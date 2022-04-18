@@ -1,21 +1,18 @@
 #!/bin/bash
 # pick-card.sh
-
 # This is an example of choosing random elements of an array.
 
+# Get the possible combinations/characteristics from the "load" file
 . ./load
-
-
 # Note variables spread over multiple lines.
 
-background=($Backgrounds)                # Read into array variable.
+# Read into array variable.
+background=($Backgrounds)
 eye=($Eyes)
-
-num_backgrounds=${#background[*]}        # Count how many elements.
+# Count how many elements.
+num_backgrounds=${#background[*]}
 num_eyes=${#eye[*]}
 
-#echo -n "${eye[$((RANDOM%num_eyes))]} of "
-#echo ${background[$((RANDOM%num_backgrounds))]}
 
 nftno="1"
 
