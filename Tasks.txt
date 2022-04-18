@@ -1,1 +1,3 @@
+- on every new NFT being generated, match in all files to find duplicates; if duplicate then discard and re-generate; count the discard streak so dev know when done/to stop generating
+
 - generate .json files with attributes, into nfts/meta, but match to avoid duplicates
